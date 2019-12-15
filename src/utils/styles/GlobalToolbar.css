@@ -1,0 +1,88 @@
+.containerToolbar {
+  float: left;
+  width: 100%;
+  background: linear-gradient(#000080, #17178e, #2323a6);
+  flex-grow: 1;
+  position: 'static';
+  white-space: pre-line;
+}
+
+.imagem {
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 100px;
+  height: 50px;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.infoUser {
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  position: absolute;
+  clear: left;
+  right: 0;
+}
+
+.infoUser img {
+  float: left;
+  background-color: rgba(10, 23, 55, 0);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  overflow: 'hidden';
+  position: 'relative';
+  margin-right: 10px;
+}
+
+.info {
+  float: left;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.info > p {
+  flex-direction: column;
+  font-size: 12px;
+  max-width: 100px;
+  max-height: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.separator {
+  padding-top: 50px;
+  float: left;
+  width: 1px;
+  border: 1.5px solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1;
+}
+
+.infoUser button {
+  margin-right: 5px;
+  background-color: rgba(10, 23, 55, 0);
+  border: none;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}

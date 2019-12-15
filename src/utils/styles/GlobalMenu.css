@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+.menu {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  border-style: none none solid none;
+  border-color: #c3c3c3;
+  border-width: 2px;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  height: 35px;
+  background: #ffffff;
+  list-style: none;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.menu li {
+  float: left;
+  padding: 0px;
+}
+
+.menu li p {
+  margin: 0px;
+  padding: 0px 25px;
+  display: block;
+  color: #000000;
+  font-weight: bold;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu li a {
+  margin: 0px;
+  padding: 0px 25px;
+  display: block;
+  color: #000000;
+  font-weight: bold;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu li ul {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  width: 225px;
+  z-index: 200;
+  background: #000080;
+  display: none;
+  height: auto;
+  position: absolute;
+}
+
+.menu li li {
+  margin: 0px;
+  padding: 0px;
+  width: 225px;
+  float: none;
+  display: block;
+}
+
+.menu li ul a {
+  margin: 0px;
+  padding: 0px 10px 0px 15px;
+  height: 35px;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.menu li ul p {
+  margin: 0px;
+  padding: 0px 10px 0px 15px;
+  height: 35px;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.menu ul li:hover a {
+  background: #ffffff
+    url(http://img27.xooimage.com/files/0/e/7/hover-bebc66.gif) bottom center
+    no-repeat;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu ul li:hover p {
+  background: #ffffff
+    url(http://img27.xooimage.com/files/0/e/7/hover-bebc66.gif) bottom center
+    no-repeat;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background: #ffffff
+    url(http://img27.xooimage.com/files/0/e/7/hover-bebc66.gif) bottom center
+    no-repeat;
+  color: #000080;
+  text-decoration: none;
+}
+
+.menu li p:hover {
+  background: #ffffff
+    url(http://img27.xooimage.com/files/0/e/7/hover-bebc66.gif) bottom center
+    no-repeat;
+  color: #000080;
+  text-decoration: none;
+}
+
+.menu li:hover ul {
+  display: block;
+}
+
+.menu li:hover li a {
+  background: none;
+}
+
+.menu li:hover li p {
+  background: none;
+}
+
+.menu li ul a:hover,
+.menu li ul li:hover a {
+  background: #2580a2
+    url(http://img46.xooimage.com/files/9/3/1/hover_sub-eb2b0d.gif) center left
+    no-repeat;
+  border: 0px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu li ul a:hover,
+.menu li ul li:hover p {
+  background: #2580a2
+    url(http://img46.xooimage.com/files/9/3/1/hover_sub-eb2b0d.gif) center left
+    no-repeat;
+  border: 0px;
+  color: #ffffff;
+  text-decoration: none;
+}
