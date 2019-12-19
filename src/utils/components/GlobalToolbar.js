@@ -1,22 +1,32 @@
 import React from 'react';
 import '../styles/GlobalToolbar.css';
 import logo from '../../assets/ComunicaLab.png';
-import user from '../../assets/User.png';
+import avatar from '../../assets/User.png';
 
 function GlobalToolbar() {
   return (
     <div className="containerToolbar">
-      <img src={logo} className="imagem" alt="ComunicaLab" />
-      <div className="grow" />
-      <div className="infoUser">
-        <img src={user} alt="User" />
-        <div className="info">
-          <p> Eike Natan Sousa Brito Ferreira Costa </p>
-          <p> Rank 1286 </p>
+      <form action="/">
+        <a href="/Home">
+          <img src={logo} alt="ComunicaLab" />
+        </a>
+        <div className="infoUser">
+          <img src={avatar} alt="User" />
+          <div className="info">
+            <div className="name">
+              <p> EikE Natan </p>
+            </div>
+            <div className="rank">
+              <p>
+                Rank &nbsp;
+                <u>1286</u>
+              </p>
+            </div>
+          </div>
+          <div className="separator" />
+          <button type="submit"> SAIR </button>
         </div>
-        <div className="separator" />
-        <button type="submit"> SAIR </button>
-      </div>
+      </form>
     </div>
   );
 }

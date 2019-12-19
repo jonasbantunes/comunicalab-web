@@ -1,13 +1,20 @@
 .containerToolbar {
+  left: 0px;
+  top: 0px;
   float: left;
   width: 100%;
-  background: linear-gradient(#000080, #17178e, #2323a6);
+  background: linear-gradient(
+      0deg,
+      rgba(45, 41, 255, 0.4725) -28.07%,
+      rgba(255, 255, 255, 0) 72.59%
+    ),
+    #000080;
   flex-grow: 1;
   position: 'static';
   white-space: pre-line;
 }
 
-.imagem {
+.containerToolbar img {
   float: left;
   margin-top: 5px;
   margin-left: 5px;
@@ -34,8 +41,8 @@
   float: left;
   background-color: rgba(10, 23, 55, 0);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   overflow: 'hidden';
   position: 'relative';
   margin-right: 10px;
@@ -47,10 +54,22 @@
   align-items: center;
 }
 
-.info > p {
+.name {
   flex-direction: column;
+  align-items: center;
   font-size: 12px;
   max-width: 100px;
+  height: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.rank {
+  bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
   max-height: 30px;
   color: #ffffff;
   font-weight: bold;
@@ -75,8 +94,10 @@
 }
 
 .infoUser button {
+  margin-left: 5px;
   margin-right: 5px;
   background-color: rgba(10, 23, 55, 0);
+  height: 50px;
   border: none;
   color: white;
   padding: 15px 10px;
@@ -85,4 +106,12 @@
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
+  border-radius: 5px; /*Define o arredondamento do objeto*/
+}
+
+.infoUser button:hover {
+  background: rgb(255, 255, 255, 0.15);
+}
+.infoUser button:focus {
+  background: rgb(255, 255, 255, 0.3);
 }
