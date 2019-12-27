@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+.GlobalMenu {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  border-style: none none solid none;
+  border-color: #c3c3c3;
+  border-width: 2px;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  background: #ffffff;
+  list-style: none;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.menu li:hover ul {
+  display: block;
+}
+
+.menu li:hover li a {
+  background: none;
+}
+
+.menu li:hover li p {
+  background: none;
+}
+
+.submenu {
+  float: left;
+  padding: 0px;
+}
+
+.submenu p {
+  margin: 0px;
+  padding: 0px 25px;
+  display: block;
+  min-width: 150px;
+  max-width: 200px;
+  word-wrap: break-word;
+  color: #000000;
+  font-weight: bold;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.submenu:hover p {
+  color: #000080;
+  text-decoration: none;
+}
+
+.submenu p:hover {
+  color: #000080;
+  text-decoration: none;
+}
+
+.submenu ul {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  border-radius: 8px;
+  z-index: 200;
+  background: #000080;
+  display: none;
+  height: auto;
+  position: absolute;
+}
+
+.subsubmenu {
+  margin: 0px;
+  padding: 0px;
+  max-width: 200px;
+  word-wrap: break-word;
+  float: none;
+  display: block;
+}
+
+.subsubmenu a {
+  float: left;
+  margin: 0px;
+  padding: 0px 10px 0px 15px;
+  display: block;
+  min-width: 150px;
+  max-height: 70px;
+  border-radius: 5px;
+  font-weight: bold;
+  line-height: 35px;
+  text-align: left;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.subsubmenu a:hover,
+.subsubmenu:hover a {
+  border: 0px;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.submenu .subsubmenu:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent #000080 transparent;
+}
