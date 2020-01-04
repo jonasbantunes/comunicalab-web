@@ -20,10 +20,10 @@ function GlobalMenu() {
           <p> Equipamento </p>
           <ul>
             <li className="subsubmenu">
-              <a href="/RegistrarLaboratorio">Muito grande esse nome</a>
+              <a href="/RegistrarEquipamento"> Registrar</a>
             </li>
             <li className="subsubmenu">
-              <a href="/ListarLaboratorio"> Acho que sim </a>
+              <a href="/ListarEquipamento"> Listar Equipamentos </a>
             </li>
           </ul>
         </li>

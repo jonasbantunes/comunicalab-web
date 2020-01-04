@@ -3,14 +3,12 @@ import GlobalToolbar from '../../utils/components/GlobalToolbar';
 import GlobalMenu from '../../utils/components/GlobalMenu';
 import GlobalTitle from '../../utils/components/GlobalTitle';
 
-function RegistrarLaboratorio() {
+export default function ListarEquipamento() {
   return (
     <div>
       <GlobalToolbar />
       <GlobalMenu />
-      <GlobalTitle name="Registrar Laboratório" />
+      <GlobalTitle name="Listar Equipamento" />
     </div>
   );
 }
-
-export default RegistrarLaboratorio;
