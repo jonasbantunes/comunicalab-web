@@ -22,7 +22,7 @@ export default function ListarEquipamento() {
           statusEquipamento="Sem Rede"
         />
         <Equipamento
-          nome="Equipamento 1"
+          nome="Equipamento 2"
           categoria="Categoria"
           statusUsoCor="UsoVerde"
           statusUso="Em uso"
@@ -30,7 +30,7 @@ export default function ListarEquipamento() {
           statusEquipamento="Sem Rede"
         />
         <Equipamento
-          nome="Equipamento 1"
+          nome="Equipamento 3"
           categoria="Categoria"
           statusUsoCor="UsoVerde"
           statusUso="Em uso"
@@ -38,7 +38,7 @@ export default function ListarEquipamento() {
           statusEquipamento="Sem Rede"
         />
         <Equipamento
-          nome="Equipamento 1"
+          nome="Equipamento 4"
           categoria="Categoria"
           statusUsoCor="UsoVerde"
           statusUso="Em uso"
@@ -46,7 +46,7 @@ export default function ListarEquipamento() {
           statusEquipamento="Sem Rede"
         />
         <Equipamento
-          nome="Equipamento 1"
+          nome="Equipamento 5"
           categoria="Categoria"
           statusUsoCor="UsoVerde"
           statusUso="Em uso"
@@ -54,15 +54,7 @@ export default function ListarEquipamento() {
           statusEquipamento="Sem Rede"
         />
         <Equipamento
-          nome="Equipamento 1"
-          categoria="Categoria"
-          statusUsoCor="UsoVerde"
-          statusUso="Em uso"
-          statusEquipamentoCor="UsoVermelho"
-          statusEquipamento="Sem Rede"
-        />
-        <Equipamento
-          nome="Equipamento 1"
+          nome="Equipamento 6"
           categoria="Categoria"
           statusUsoCor="UsoVerde"
           statusUso="Em uso"
