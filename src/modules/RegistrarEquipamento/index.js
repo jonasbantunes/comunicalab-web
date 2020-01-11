@@ -9,7 +9,7 @@ export default function RegistrarEquipamento() {
     <div>
       <GlobalToolbar />
       <GlobalMenu />
-      <GlobalTitle name="Registrar Equipamento" />
+      <GlobalTitle name="Registrar Equipamento" itens="" />
       <Form />
     </div>
   );

@@ -22,21 +22,23 @@
 
 .title {
   float: left;
-  margin-top: 10px;
+  height: 39px;
+  margin-top: 5px;
   min-width: 150px;
   max-width: 400px;
   word-wrap: break-word;
   background: rgba(0, 0, 0, 0.3);
-}
-
-.title p {
-  margin-left: 20px;
-  margin-right: 20px;
   color: #ffffff;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: normal;
-  text-align: center;
-  text-decoration: none;
+}
+
+.nameTitle {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.itemTitle {
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
 }

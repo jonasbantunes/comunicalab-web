@@ -13,10 +13,10 @@ function GlobalToolbar() {
         <div className="infoUser">
           <img src={avatar} alt="User" />
           <div className="info">
-            <div className="name">
+            <div className="nameUser">
               <p> EikE Natan </p>
             </div>
-            <div className="rank">
+            <div className="rankUser">
               <p>
                 Rank &nbsp;
                 <u>1286</u>

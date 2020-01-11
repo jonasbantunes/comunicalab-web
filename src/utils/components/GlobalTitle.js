@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/GlobalTitle.css';
 
-function GlobalTitle({ name }) {
+function GlobalTitle({ name, itens }) {
   return (
     <div className="globaltitle">
       <div className="backgroundtitle">
         <div className="title">
-          <p>{name}</p>
+          <h2 className="nameTitle">{name}</h2>
+          <h5 className="itemTitle">{itens}</h5>
         </div>
       </div>
     </div>
@@ -16,10 +17,12 @@ function GlobalTitle({ name }) {
 
 GlobalTitle.propTypes = {
   name: PropTypes.string,
+  itens: PropTypes.string,
 };
 
 GlobalTitle.defaultProps = {
   name: '',
+  itens: '',
 };
 
 export default GlobalTitle;
