@@ -16,49 +16,49 @@ export default function ListarEquipamento() {
         <Equipamento
           nome="Equipamento 1"
           categoria="Categoria"
-          statusUsoCor="UsoVerde"
+          statusUsoCor="statusVerde"
           statusUso="Em uso"
-          statusEquipamentoCor="UsoVermelho"
+          statusEquipamentoCor="statusVermelho"
           statusEquipamento="Sem Rede"
         />
         <Equipamento
           nome="Equipamento 2"
           categoria="Categoria"
-          statusUsoCor="UsoVerde"
+          statusUsoCor="statusVerde"
           statusUso="Em uso"
-          statusEquipamentoCor="UsoVermelho"
+          statusEquipamentoCor="statusVermelho"
           statusEquipamento="Sem Rede"
         />
         <Equipamento
           nome="Equipamento 3"
           categoria="Categoria"
-          statusUsoCor="UsoVerde"
+          statusUsoCor="statusVerde"
           statusUso="Em uso"
-          statusEquipamentoCor="UsoVermelho"
+          statusEquipamentoCor="statusVermelho"
           statusEquipamento="Sem Rede"
         />
         <Equipamento
           nome="Equipamento 4"
           categoria="Categoria"
-          statusUsoCor="UsoVerde"
+          statusUsoCor="statusVerde"
           statusUso="Em uso"
-          statusEquipamentoCor="UsoVermelho"
+          statusEquipamentoCor="statusVermelho"
           statusEquipamento="Sem Rede"
         />
         <Equipamento
           nome="Equipamento 5"
           categoria="Categoria"
-          statusUsoCor="UsoVerde"
+          statusUsoCor="statusVerde"
           statusUso="Em uso"
-          statusEquipamentoCor="UsoVermelho"
+          statusEquipamentoCor="statusVermelho"
           statusEquipamento="Sem Rede"
         />
         <Equipamento
           nome="Equipamento 6"
           categoria="Categoria"
-          statusUsoCor="UsoVerde"
+          statusUsoCor="statusVerde"
           statusUso="Em uso"
-          statusEquipamentoCor="UsoVermelho"
+          statusEquipamentoCor="statusVermelho"
           statusEquipamento="Sem Rede"
         />
       </div>

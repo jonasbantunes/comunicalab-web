@@ -3,7 +3,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import Error from './Error';
-import '../styles/Form.css';
+import '../styles/Formulario.css';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -39,13 +39,13 @@ export default function Form() {
         handleSubmit,
         isSubmitting,
       }) => (
-        <div className="Form">
+        <div className="formulario">
           <form onSubmit={handleSubmit}>
-            <div className="Form-Row">
-              <div className="Form-Label">
+            <div className="formularioLinha">
+              <div className="formularioLabel">
                 <p>Nome:</p>
               </div>
-              <div className="Form-Input">
+              <div className="formularioInput">
                 <input
                   name="name"
                   id="name"
@@ -59,11 +59,11 @@ export default function Form() {
               </div>
               <Error touched={touched.name} message={errors.name} />
             </div>
-            <div className="Form-Row">
-              <div className="Form-Label">
+            <div className="formularioLinha">
+              <div className="formularioLabel">
                 <p>Categoria:</p>
               </div>
-              <div className="Form-Input">
+              <div className="formularioInput">
                 <input
                   name="category"
                   id="category"
@@ -79,11 +79,11 @@ export default function Form() {
               </div>
               <Error touched={touched.category} message={errors.category} />
             </div>
-            <div className="Form-Row">
-              <div className="Form-Label">
+            <div className="formularioLinha">
+              <div className="formularioLabel">
                 <p>Localização:</p>
               </div>
-              <div className="Form-Select">
+              <div className="formularioSelect">
                 <select
                   name="localization"
                   id="localization"
@@ -115,11 +115,11 @@ export default function Form() {
                 message={errors.localization}
               />
             </div>
-            <div className="Form-Button">
-              <div className="Form-Button-Cancel">
+            <div className="formularioButton">
+              <div className="formularioButtonCancelar">
                 <button type="button"> Cancelar </button>
               </div>
-              <div className="Form-Button-Register">
+              <div className="formularioButtonRegistrar">
                 <button type="submit" disabled={isSubmitting}>
                   Registrar
                 </button>

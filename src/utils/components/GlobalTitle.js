@@ -5,10 +5,10 @@ import '../styles/GlobalTitle.css';
 function GlobalTitle({ name, itens }) {
   return (
     <div className="globaltitle">
-      <div className="backgroundtitle">
-        <div className="title">
-          <h2 className="nameTitle">{name}</h2>
-          <h5 className="itemTitle">{itens}</h5>
+      <div className="globaltitleBackground">
+        <div className="globaltitleTitle">
+          <h2 className="globaltitleName">{name}</h2>
+          <h5 className="globaltitleItem">{itens}</h5>
         </div>
       </div>
     </div>

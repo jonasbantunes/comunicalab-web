@@ -2,7 +2,7 @@ import React from 'react';
 import GlobalToolbar from '../../utils/components/GlobalToolbar';
 import GlobalMenu from '../../utils/components/GlobalMenu';
 import GlobalTitle from '../../utils/components/GlobalTitle';
-import Form from './components/Form';
+import Formulario from './components/Formulario';
 
 export default function RegistrarEquipamento() {
   return (
@@ -10,7 +10,7 @@ export default function RegistrarEquipamento() {
       <GlobalToolbar />
       <GlobalMenu />
       <GlobalTitle name="Registrar Equipamento" itens="" />
-      <Form />
+      <Formulario />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
-.Form {
+.formulario {
   float: left;
   max-width: 400px;
   background: rgba(0, 0, 128, 0.2);
@@ -12,11 +12,11 @@
   transform: translateX(-50%);
 }
 
-.Form-Row {
+.formularioLinha {
   margin-top: 5px;
 }
 
-.Form-Label {
+.formularioLabel {
   display: block;
   margin-left: 10px;
   padding-bottom: 5px;
@@ -26,7 +26,7 @@
   font-weight: normal;
 }
 
-.Form-Input input {
+.formularioInput input {
   margin-left: 10px;
   margin-right: 10px;
   width: 250px;
@@ -40,7 +40,7 @@
   font-weight: normal;
 }
 
-.Form-Select select {
+.formularioSelect select {
   margin-left: 10px;
   margin-right: 10px;
   width: 250px;
@@ -61,11 +61,11 @@
   font-weight: normal;
 }
 
-.Form-Select select:invalid {
+.formularioSelect select:invalid {
   color: gray;
 }
 
-.Form-Button {
+.formularioButton {
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
@@ -74,7 +74,7 @@
   font-weight: normal;
 }
 
-.Form-Button-Cancel button {
+.formularioButtonCancelar button {
   float: left;
   margin-left: 10px;
   background: #000080;
@@ -84,7 +84,7 @@
   height: 30px;
 }
 
-.Form-Button-Register button {
+.formularioButtonRegistrar button {
   margin-left: 50px;
   background: #000080;
   border-radius: 20px;

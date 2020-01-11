@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
-.GlobalMenu {
+.globalmenu {
   float: left;
   margin: 0px;
   padding: 0px;
@@ -10,7 +10,7 @@
   border-width: 2px;
 }
 
-.menu {
+.globalmenuMenu {
   margin: 0;
   padding: 0;
   display: inline;
@@ -21,24 +21,24 @@
   font-weight: bold;
 }
 
-.menu li:hover ul {
+.globalmenuMenu li:hover ul {
   display: block;
 }
 
-.menu li:hover li a {
+.globalmenuMenu li:hover li a {
   background: none;
 }
 
-.menu li:hover li p {
+.globalmenuMenu li:hover li p {
   background: none;
 }
 
-.submenu {
+.globalmenuSubMenu {
   float: left;
   padding: 0px;
 }
 
-.submenu p {
+.globalmenuSubMenu p {
   margin: 0px;
   padding: 0px 25px;
   display: block;
@@ -52,17 +52,17 @@
   text-decoration: none;
 }
 
-.submenu:hover p {
+.globalmenuSubMenu:hover p {
   color: #000080;
   text-decoration: none;
 }
 
-.submenu p:hover {
+.globalmenuSubMenu p:hover {
   color: #000080;
   text-decoration: none;
 }
 
-.submenu ul {
+.globalmenuSubMenu ul {
   padding: 0px;
   margin: 0px;
   border: 0px;
@@ -74,7 +74,7 @@
   position: absolute;
 }
 
-.subsubmenu {
+.globalmenuSubSubMenu {
   margin: 0px;
   padding: 0px;
   max-width: 200px;
@@ -83,7 +83,7 @@
   display: block;
 }
 
-.subsubmenu a {
+.globalmenuSubSubMenu a {
   float: left;
   margin: 0px;
   padding: 0px 10px 0px 15px;
@@ -100,14 +100,14 @@
   color: #ffffff;
 }
 
-.subsubmenu a:hover,
-.subsubmenu:hover a {
+.globalmenuSubSubMenu a:hover,
+.globalmenuSubSubMenu:hover a {
   border: 0px;
   color: #ffffff;
   text-decoration: underline;
 }
 
-.submenu .subsubmenu:after {
+.globalmenuSubMenu .globalmenuSubSubMenu:after {
   content: '';
   position: absolute;
   bottom: 100%;

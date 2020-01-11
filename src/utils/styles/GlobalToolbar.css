@@ -1,4 +1,4 @@
-.containerToolbar {
+.globaltoolbar {
   left: 0px;
   top: 0px;
   float: left;
@@ -14,7 +14,7 @@
   white-space: pre-line;
 }
 
-.containerToolbar img {
+.globaltoolbar img {
   float: left;
   margin-top: 5px;
   margin-left: 5px;
@@ -27,7 +27,7 @@
   flex-grow: 1;
 }
 
-.infoUser {
+.globaltoolbarInfoUser {
   float: left;
   margin-top: 5px;
   margin-left: 5px;
@@ -37,7 +37,7 @@
   right: 0;
 }
 
-.infoUser img {
+.globaltoolbarInfoUser img {
   float: left;
   background-color: rgba(10, 23, 55, 0);
   border-radius: 50%;
@@ -48,13 +48,13 @@
   margin-right: 10px;
 }
 
-.info {
+.globaltoolbarInfo {
   float: left;
   margin-right: 10px;
   align-items: center;
 }
 
-.nameUser {
+.globaltoolbarName {
   flex-direction: column;
   align-items: center;
   font-size: 12px;
@@ -65,7 +65,7 @@
   overflow: hidden;
 }
 
-.rankUser {
+.globaltoolbarRank {
   bottom: 0px;
   flex-direction: column;
   align-items: center;
@@ -77,7 +77,7 @@
   overflow: hidden;
 }
 
-.separator {
+.globaltoolbarSeparador {
   padding-top: 50px;
   float: left;
   width: 1px;
@@ -93,7 +93,7 @@
   border-image-slice: 1;
 }
 
-.infoUser button {
+.globaltoolbarInfoUser button {
   margin-left: 5px;
   margin-right: 5px;
   background-color: rgba(10, 23, 55, 0);
@@ -109,9 +109,9 @@
   border-radius: 5px; /*Define o arredondamento do objeto*/
 }
 
-.infoUser button:hover {
+.globaltoolbarInfoUser button:hover {
   background: rgb(255, 255, 255, 0.15);
 }
-.infoUser button:focus {
+.globaltoolbarInfoUser button:focus {
   background: rgb(255, 255, 255, 0.3);
 }

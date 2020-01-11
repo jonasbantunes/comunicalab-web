@@ -71,18 +71,20 @@
   font-weight: normal;
 }
 
-.UsoVermelho {
+.statusVermelho {
   float: left;
   border-radius: 50%;
   height: 12px;
   width: 12px;
+  margin-top: 1px;
   background-color: #ff0000;
 }
 
-.UsoVerde {
+.statusVerde {
   float: left;
   border-radius: 50%;
   height: 12px;
   width: 12px;
+  margin-top: 1px;
   background-color: #09ff00;
 }

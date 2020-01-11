@@ -5,25 +5,25 @@ import avatar from '../../assets/User.png';
 
 function GlobalToolbar() {
   return (
-    <div className="containerToolbar">
+    <div className="globaltoolbar">
       <form action="/">
         <a href="/Home">
           <img src={logo} alt="ComunicaLab" />
         </a>
-        <div className="infoUser">
+        <div className="globaltoolbarInfoUser">
           <img src={avatar} alt="User" />
-          <div className="info">
-            <div className="nameUser">
+          <div className="globaltoolbarInfo">
+            <div className="globaltoolbarName">
               <p> EikE Natan </p>
             </div>
-            <div className="rankUser">
+            <div className="globaltoolbarRank">
               <p>
                 Rank &nbsp;
                 <u>1286</u>
               </p>
             </div>
           </div>
-          <div className="separator" />
+          <div className="globaltoolbarSeparador" />
           <button type="submit"> SAIR </button>
         </div>
       </form>
