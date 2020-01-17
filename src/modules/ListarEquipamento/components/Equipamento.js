@@ -43,18 +43,18 @@ function Equipamento({
 Equipamento.propTypes = {
   nome: PropTypes.string,
   categoria: PropTypes.string,
-  statusUsoCor: PropTypes.bool,
+  statusUsoCor: PropTypes.string,
   statusUso: PropTypes.string,
-  statusEquipamentoCor: PropTypes.bool,
+  statusEquipamentoCor: PropTypes.string,
   statusEquipamento: PropTypes.string,
 };
 
 Equipamento.defaultProps = {
   nome: '',
   categoria: '',
-  statusUsoCor: false,
+  statusUsoCor: '',
   statusUso: '',
-  statusEquipamentoCor: false,
+  statusEquipamentoCor: '',
   statusEquipamento: '',
 };
 

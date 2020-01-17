@@ -16,7 +16,7 @@ const validationSchema = Yup.object().shape({
     .required('Digite a categoria do Equipamento!'),
 });
 
-export default function Form() {
+function Formulario() {
   return (
     <Formik
       initialValues={{ name: '', category: '', localization: '' }}
@@ -88,7 +88,7 @@ export default function Form() {
                   name="localization"
                   id="localization"
                   onChange={handleChange}
-                  value={values.localization}
+                  defaultValue={values.localization}
                   onBlur={handleBlur}
                   className={
                     touched.localization && errors.localization
@@ -96,7 +96,7 @@ export default function Form() {
                       : null
                   }
                 >
-                  <option value="" disabled selected hidden>
+                  <option value="" disabled>
                     Escolha a localização
                   </option>
                   <option value="2" id="2">
@@ -131,3 +131,5 @@ export default function Form() {
     </Formik>
   );
 }
+
+export default Formulario;
