@@ -1,0 +1,90 @@
+.equipamento {
+  float: left;
+  width: 300px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  margin-top: 20px;
+  margin-right: 25px;
+}
+
+.equipamento button {
+  float: right;
+  margin-top: -25px;
+  width: 40px;
+  height: 40px;
+  margin-right: 7px;
+  background: rgba(255, 0, 0, 1);
+  border: none;
+  background: url('../../../assets/Pontos.png') no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+}
+
+.equipamentoNome h1 {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.equipamentoCategoria h1 {
+  padding-left: 10px;
+  font-size: 15px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.equipamentoStatus {
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.equipamentoStatusUso {
+  padding-left: 10px;
+}
+
+.equipamentoStatusUso h2 {
+  float: left;
+  margin-left: 5px;
+  font-size: 12px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 2px;
+}
+
+.equipamentoStatusEquipamento {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.equipamentoStatusEquipamento h2 {
+  float: left;
+  margin-left: 5px;
+  font-size: 12px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.statusVermelho {
+  float: left;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin-top: 1px;
+  background-color: #ff0000;
+}
+
+.statusVerde {
+  float: left;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin-top: 1px;
+  background-color: #09ff00;
+}
