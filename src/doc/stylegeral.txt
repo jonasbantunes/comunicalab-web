@@ -1,0 +1,58 @@
+cores =
+{
+  primaria =
+  {
+    maisdois = #000034;
+    maisum = #000067;
+    zero = #000080;
+    menosum = #00009a;
+    menosdois = #0000cd;
+  }
+  secundaria =
+  {
+    maisdois = #003434;
+    maisum = #006767;
+    zero = #008080;
+    menosum = #009a9a;
+    menosdois = #00cdcd;
+  }
+  terciaria =
+  {
+    maisdois = #340000;
+    maisum = #670000;
+    zero = #800000;
+    menosum = #940000;
+    menosdois = #cd0000;
+  }
+  quaternaria =
+  {
+    maisdois = #343400;
+    maisum = #676700;
+    zero = #808000;
+    menosum = #9a9a00;
+    menosdois = #cdcd00;
+  }
+  cinza =
+  {
+    preto = #000000;
+    maistres = #050506;
+    maisdois = #17171b;
+    maisum = #292930;
+    zero = #3b3b45;
+    menosum = #4d4d5a;
+    menosdois = #5f5f6f;
+    menostres = #717184;
+    branco = #ffffff;
+  }
+}
+
+texto =
+{
+  titulo = 15px;
+  toolbar = 13px;
+  menu = 14px;
+  subtitulo = 11px;
+  cardinfo = 12px;
+
+  fonte = 'Roboto', Arial, Helvetica, sans-serif;
+}

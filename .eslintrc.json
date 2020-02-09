@@ -9,14 +9,18 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+  "parser": "babel-eslint",
   "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
     "ecmaFeatures": {
-      "jsx": true
+      "globalReturn": false
     },
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "babelOptions": {
+      "configFile": "path/to/config.js"
+    }
   },
-  "plugins": ["react", "jsx-a11y", "import"],
+  "plugins": ["react", "jsx-a11y", "import", "import-helpers"],
   "rules": {
     "react/jsx-filename-extension": [
       "error",
@@ -26,6 +30,7 @@
     ],
     "global-require": "off",
     "import/prefer-default-export": "off",
-    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "import/no-named-as-default": 0
   }
 }
