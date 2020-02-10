@@ -1,13 +1,15 @@
 import React from 'react';
-import GlobalToolbar from '../../utils/components/GlobalToolbar';
-import GlobalMenu from '../../utils/components/GlobalMenu';
+
+import Menu from '../../utils/components/Menu';
+import Title from '../../utils/components/Title';
+import Toolbar from '../../utils/components/Toolbar';
 
 export default function Home() {
   return (
     <div>
-      <GlobalToolbar />
-      <GlobalMenu />
-      <h1> Home </h1>
+      <Toolbar />
+      <Menu />
+      <Title title="Home" />
     </div>
   );
 }

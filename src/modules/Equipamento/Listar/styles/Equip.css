@@ -1,0 +1,219 @@
+.equip {
+  float: left;
+  width: 350px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  margin-top: 20px;
+  margin-right: 25px;
+  display: flex;
+}
+
+.equipInfo {
+  float: left;
+  width: 300px;
+}
+
+.equipName {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.equipName h1 {
+  font-size: 18px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.equipCategory {
+  padding-top: 5px;
+}
+
+.equipCategory h1 {
+  padding-left: 10px;
+  font-size: 14px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.equipStatus {
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.equipStatusUso {
+  display: inline-flex;
+  margin-top: 7px;
+  width: 250px;
+}
+
+.equipStatusUso h1 {
+  padding-left: 10px;
+  font-size: 12px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.equipStatusUso h2 {
+  padding-left: 5px;
+  font-size: 12px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.equipStatusEquip {
+  display: inline-flex;
+  margin-top: 2px;
+  width: 250px;
+}
+
+.equipStatusEquip h1 {
+  padding-left: 10px;
+  font-size: 12px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.equipStatusEquip h2 {
+  padding-left: 5px;
+  font-size: 12px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.equipStatusGreen {
+  float: left;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin-top: 1px;
+  background-color: #09ff00;
+}
+
+.equipStatusRed {
+  float: left;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin-top: 1px;
+  background-color: #ff0000;
+}
+
+.equipStatusYellow {
+  float: left;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin-top: 1px;
+  background-color: #ffee00;
+}
+
+.equipMenu {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  background: #ffffff;
+}
+
+.equipMenu {
+  list-style: none;
+}
+
+.equipMenu li:hover ul {
+  display: block;
+}
+
+.equipMenu li:hover li button {
+  background: none;
+}
+
+.equipMenu li:hover li p {
+  background: none;
+}
+
+.equipSubMenu {
+  float: left;
+  padding: 0px;
+}
+
+.equipSubMenu p {
+  float: right;
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  background: rgba(255, 0, 0, 1);
+  border: none;
+  background: url('../../../../assets/Pontos.png') no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+}
+
+.equipSubMenu:hover p {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.equipSubMenu p:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.equipSubMenu ul {
+  padding: 0px;
+  margin-top: 12px;
+  margin-left: -110px;
+  border: 0px;
+  border-radius: 8px;
+  z-index: 200;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: none;
+  height: auto;
+  position: absolute;
+}
+
+.equipSubSubMenu {
+  margin: 0px;
+  padding: 0px;
+  max-width: 200px;
+  word-wrap: break-word;
+  float: none;
+  display: block;
+}
+
+.equipSubSubMenu button {
+  margin: 0px;
+  display: block;
+  min-width: 150px;
+  max-height: 70px;
+  font-weight: bold;
+  line-height: 35px;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  background-color: rgba(10, 23, 55, 0);
+  border: none;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.equipSubSubMenu:hover {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.15);
+}
+.equipSubSubMenu:active {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.3);
+}

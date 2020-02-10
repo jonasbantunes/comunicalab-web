@@ -1,68 +1,154 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# COMUNICA LAB - WEB
 
-## Available Scripts
+## 1) Extensões (VS Code e Browser)
 
-In the project directory, you can run:
+##### Nesse projeto, está sendo utilizado o VS Code. Por isso, para melhorar o desenvolvimento é necessário instalar algumas extensões.
 
-### `yarn start`
+#### Obrigatório
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Prettier
+- EditorConfig for VS Code
+- ESLint
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### Não Obrigatório
 
-### `yarn test`
+- Dracula Official -> Tema para VS Code.
+- Material Icon Themes -> Icones para o VS Code.
+- Rocketseat ReactJS -> Atalho para criação de componentes.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Para ajudar no desenvolvimento, tambem pode instalar a extênsão para browser: React Developer Tools
 
-### `yarn build`
+## 2) Configurar VS Code
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### Aperte Ctrl + Shift + P
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+##### Escreva Preferences: Open Settings (JSON)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### Dentro das preferências digite:
 
-### `yarn eject`
+#### Obrigatório
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+"editor.formatOnSave": true,
+"eslint.autoFixOnSave": true
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Não Obrigatório
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Instalar a font Fira Code pelo site [FiraCode](https://github.com/tonsky/FiraCode)
+- Procure por Download.v2, onde esse 2 é o número da versão, podendo ser um valor diferente.
+- Baixe a fonte e instale no sistema operacional todas elas.
+- Vá nas preferências e digite:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```sh
+"editor.fontFamily": "Fira Code",
+"editor.fontLigatures": true,
+"emmet.syntaxProfiles": {
+        "javascript": "jsx",
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+    }
+```
 
-## Learn More
+## 3) Tarefa
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##### Abra o RedMine: [RedMine-DComp](https://redmine.dcomp.ufs.br)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##### Procure a sua tarefa e o número dela. (Exemplo: #13)
 
-### Code Splitting
+##### Crie uma branch com o nome do número da tarefa.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```sh
+git checkout -b 13
+```
 
-### Analyzing the Bundle Size
+```sh
+git add .
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```sh
+git commit -m "Criando a pagina"
+```
 
-### Making a Progressive Web App
+```sh
+git push -u origin 13
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- Abra o GitHub: [ComunicaLab-Web](https://github.com/DCOMP-UFS/comunicalab-web)
+- Aperte em Compare & pull request.
+- No canto direito em Reviewers, clique na chave ao lado e selecione 2 pessoas do projeto.
+- Descreva o nome e a descrição da tarefa.
+- Aperte em Create pull request.
 
-### Advanced Configuration
+## 4) Estrutura do Projeto
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```
+[src]
+    [modules] //Pasta com todos os modulos da app
+        [module name] //Pasta de um modulo
+            [actions] //Pasta das actions do modulo
+                actionName.js
+            [reducers] //Pasta dos reducers do modulo
+                reducerName.js
+            [constants] //Pasta das constantes do modulo
+            [styles] //Pasta dos stilos gerais do modulo
+            [components] //Pasta dos componentes do modulo
+                [component name] //Pasta de um componente do modulo
+                    componentController.jsx //Componente que recebe os reducers e actions e possui alguma logica
+                    componentView.jsx //Componente que apenas exibe o layout do componente
+                    styles //stilos especificos do componente
+                index_old.js //arquivo que importa todos os componentes e exporta eles
+        [utils] //Pasta de arquivos e pastas gerais do app
+            [helpers] //Pasta com funcoes de apoio, tais como api, formatacao de numero,data,cpf e cnpj
+                index_old.js //Arquivo que exporta todos os helpers
+            [components] //Pasta com os componentes gerais da app, sao usados em varios lugares
+                index_old.js //aquivo que exporta todos os componentes
+            [styles] //stilos gerais da app
+```
 
-### Deployment
+###### Exemplo
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```
+├── src
+├── index.jsx
+├── app.jsx
+├── store
+│   ├── index.js
+└── modules
+    ├── home
+        ├── actions
+            └── actionsHome.js
+        ├── reducer
+            └── reducerHome.js
+        ├── constants
+            └── index.js
+        ├── components
+            ├── HomeController.jsx
+            └── HomeControllerView.jsx
+        └── index.js
+    └── login
+        ├── actions
+            └── actionsLogin.js
+        ├── reducer
+            └── reducerLogin.js
+        ├── constants
+            └── index.js
+        ├── components
+            ├── LoginController.jsx
+            └── LoginControllerView.jsx
+        └── index.js
+```
 
-### `yarn build` fails to minify
+## 4) Telas
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[Figma](https://www.figma.com/file/xyAhI5C32LZ4coNb89uOnn/Comunica-LAB?node-id=4%3A2)
+
+## 5) Comandos React
+
+```
+yarn start
+yarn test
+yarn build
+yarn eject
+```
