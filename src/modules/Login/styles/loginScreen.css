@@ -1,0 +1,19 @@
+.logo {
+  position: absolute;
+  /* float: left; */
+  left: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 27.5%;
+}
+
+.verticalBar {
+  border-left: 3px solid #FFFFFF;
+  float: left;
+  height: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 33%;
+}
