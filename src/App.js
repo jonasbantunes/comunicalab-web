@@ -1,10 +1,9 @@
 import React from 'react';
-import Login from './modules/Login/index';
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <header className="App-header">Learn React</header>
     </div>
   );
 }
