@@ -4,7 +4,10 @@
     "es6": true,
     "jest": true
   },
-  "extends": ["plugin:react/recommended", "airbnb"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -20,17 +23,39 @@
       "configFile": "path/to/config.js"
     }
   },
-  "plugins": ["react", "jsx-a11y", "import", "import-helpers"],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
   "rules": {
     "react/jsx-filename-extension": [
       "error",
       {
-        "extensions": [".js", ".jsx"]
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
       }
     ],
     "global-require": "off",
     "import/prefer-default-export": "off",
-    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
-    "import/no-named-as-default": 0
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTaggedTemplates": true
+      }
+    ],
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        "html": "ignore",
+        "custom": "ignore",
+        "explicitSpread": "ignore",
+        "exceptions": [
+          ""
+        ]
+      }
+    ]
   }
 }
