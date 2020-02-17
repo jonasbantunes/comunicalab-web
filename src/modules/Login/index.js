@@ -2,17 +2,16 @@ import React from 'react';
 import SigninForm from './components/SigninForm';
 
 import './styles/index.css';
-import './styles/loginScreen.css';
 
 function Login() {
   return (
-    <div>
+    <div className="login">
       <img
         alt="Logo da aplicação 'Comunica Lab' "
-        className="logo"
+        className="loginLogo"
         src={require('../../assets/ComunicaLab.png')}
       />
-      <div className="verticalBar" />
+      <div className="loginVerticalBar" />
       <SigninForm />
     </div>
   );

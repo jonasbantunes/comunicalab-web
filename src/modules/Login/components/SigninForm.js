@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 
-import '../styles/form.css';
+import '../styles/SigninForm.css';
 
 const TextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
@@ -12,11 +12,7 @@ const TextInput = ({ label, ...props }) => {
   return (
     <div>
       <label htmlFor={id}>{label}</label>
-      <input
-        className={`textInput ${specClassName}`}
-        {...field}
-        {...props}
-      />
+      <input className={`textInput ${specClassName}`} {...field} {...props} />
       {meta.touched && meta.error ? (
         <div className="erro">{meta.error}</div>
       ) : null}
@@ -30,13 +26,10 @@ const Checkbox = ({ children, ...props }) => {
 
   return (
     <div className="checkbox">
-      <label htmlFor="rememberPassword" className="label">{children}</label>
-      <input
-        className={specClassName}
-        {...field}
-        {...props}
-        type="checkbox"
-      />
+      <label htmlFor="rememberPassword" className="label">
+        {children}
+      </label>
+      <input className={specClassName} {...field} {...props} type="checkbox" />
     </div>
   );
 };
@@ -70,23 +63,41 @@ const SigninForm = () => (
     >
       <Form className="formInput">
         <TextInput
-          label={<img alt="Usuário" className="userForm" src={require('../../../assets/UserForm.png')} />}
+          label={(
+            <img
+              alt="Usuário"
+              className="userForm"
+              src={require('../../../assets/UserForm.png')}
+            />
+          )}
           name="user"
           specClassName="userInput"
           id="user"
           type="text"
         />
         <TextInput
-          label={<img alt="Senha" className="passwordForm" src={require('../../../assets/Password.png')} />}
+          label={(
+            <img
+              alt="Senha"
+              className="passwordForm"
+              src={require('../../../assets/Password.png')}
+            />
+          )}
           name="password"
           specClassName="passwordInput"
           id="password"
           type="password"
         />
-        <Checkbox id="rememberPassword" name="rememberPassword" specClassName="checkboxInput">
+        <Checkbox
+          id="rememberPassword"
+          name="rememberPassword"
+          specClassName="checkboxInput"
+        >
           Lembrar senha
         </Checkbox>
-        <button className="loginBtn" type="submit">Login</button>
+        <button className="loginBtn" type="submit">
+          Login
+        </button>
       </Form>
     </Formik>
   </div>
