@@ -34,8 +34,6 @@ export default function Routes() {
           path="/Equipamento/Visualizar/:id"
           component={equipamentoVisualizar}
         />
-
-        <Route path="/Equipamento/Listar" component={equipamentoListar} />
       </Switch>
     </BrowserRouter>
   );
