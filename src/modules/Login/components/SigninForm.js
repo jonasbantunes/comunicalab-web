@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 
@@ -95,9 +96,11 @@ const SigninForm = () => (
         >
           Lembrar senha
         </Checkbox>
-        <button className="loginBtn" type="submit">
-          Login
-        </button>
+        <Link to="/Home">
+          <button className="loginBtn" type="button">
+            Login
+          </button>
+        </Link>
       </Form>
     </Formik>
   </div>
