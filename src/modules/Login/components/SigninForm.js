@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
-
+import UserIcon from '../../../assets/User.png';
+import UserSquareIcon from '../../../assets/UserForm.png';
+import PasswordSquareIcon from '../../../assets/Password.png';
 import '../styles/SigninForm.css';
 
 const TextInput = ({ label, ...props }) => {
@@ -40,7 +42,7 @@ const SigninForm = () => (
     <img
       alt="Avatar do usuário"
       className="userImg"
-      src={require('../../../assets/User.png')}
+      src={UserIcon}
     />
     <Formik
       initialValues={{
@@ -68,7 +70,7 @@ const SigninForm = () => (
             <img
               alt="Usuário"
               className="userForm"
-              src={require('../../../assets/UserForm.png')}
+              src={UserSquareIcon}
             />
           )}
           name="user"
@@ -81,7 +83,7 @@ const SigninForm = () => (
             <img
               alt="Senha"
               className="passwordForm"
-              src={require('../../../assets/Password.png')}
+              src={PasswordSquareIcon}
             />
           )}
           name="password"
