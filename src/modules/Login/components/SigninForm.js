@@ -39,11 +39,7 @@ const Checkbox = ({ children, ...props }) => {
 
 const SigninForm = () => (
   <div className="form">
-    <img
-      alt="Avatar do usuário"
-      className="userImg"
-      src={UserIcon}
-    />
+    <img alt="Avatar do usuário" className="userImg" src={UserIcon} />
     <Formik
       initialValues={{
         user: '',
@@ -66,26 +62,22 @@ const SigninForm = () => (
     >
       <Form className="formInput">
         <TextInput
-          label={(
-            <img
-              alt="Usuário"
-              className="userForm"
-              src={UserSquareIcon}
-            />
-          )}
+          label={
+            <img alt="Usuário" className="userForm" src={UserSquareIcon} />
+          }
           name="user"
           specClassName="userInput"
           id="user"
           type="text"
         />
         <TextInput
-          label={(
+          label={
             <img
               alt="Senha"
               className="passwordForm"
               src={PasswordSquareIcon}
             />
-          )}
+          }
           name="password"
           specClassName="passwordInput"
           id="password"
