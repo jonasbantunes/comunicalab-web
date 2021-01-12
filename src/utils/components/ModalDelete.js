@@ -1,14 +1,9 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable arrow-parens */
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import '../styles/ModalDelete.css';
 import PropTypes from 'prop-types';
 
 export default class ModalDelete extends React.PureComponent {
-  onClose = e => {
+  onClose = (e) => {
     this.props.onClose && this.props.onClose(e);
   };
 
