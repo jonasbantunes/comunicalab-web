@@ -1,33 +1,28 @@
 import React from 'react';
-
-import '../styles/Toolbar.css';
-import logo from '../../assets/ComunicaLab.png';
+import { Link } from 'react-router-dom';
 import avatar from '../../assets/User.png';
+import styles from '../styles/Toolbar.module.css';
+import logoImg from '../../assets/ComunicaLab.png';
 
 function Toolbar() {
   return (
-    <div className="toolbar">
-      <form action="/">
-        <a href="/Home">
-          <img src={logo} alt="ComunicaLab" />
-        </a>
-        <div className="toolbarInfoRank">
-          <img src={avatar} alt="User" />
-          <div className="toolbarInfo">
-            <div className="toolbarName">
-              <p> EikE Natan </p>
-            </div>
-            <div className="toolbarRank">
-              <p>
-                Rank &nbsp;
-                <u>1286</u>
-              </p>
-            </div>
-          </div>
-          <div className="toolbarSeparator" />
-          <button type="submit"> SAIR </button>
+    <div className={styles.wrapper}>
+      <Link className={styles.logoLink} to="/Home">
+        <img className={styles.logoImg} src={logoImg} alt="ComunicaLab" />
+      </Link>
+
+      <div className={styles.spacing}></div>
+
+      <div className={styles.accountWrapper}>
+        <img className={styles.accountAvatar} src={avatar} alt="User" />
+        <div className={styles.accountInfo}>
+          <p className={styles.accountText}>Fulano da Silva</p>
+          <p className={styles.accountText}>Rank 1</p>
         </div>
-      </form>
+      </div>
+
+      <div className={styles.toolbarSeparator} />
+      <button className={styles.logoutBtn}>SAIR</button>
     </div>
   );
 }
