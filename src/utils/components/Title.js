@@ -1,16 +1,14 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import '../styles/Title.css';
+import styles from '../styles/Title.module.css';
 
 function Title({ title, subTitle }) {
   return (
-    <div className="title">
-      <div className="titleBackground">
-        <div className="titleInfo">
-          <h2 className="titleTitle">{title}</h2>
-          <h5 className="titleSubTitle">{subTitle}</h5>
-        </div>
+    <div className={styles.background}>
+      <div className={styles.info}>
+        <h2 className={styles.title}>{title}</h2>
+        <h3 className={styles.subtitle}>{subTitle}</h3>
       </div>
     </div>
   );

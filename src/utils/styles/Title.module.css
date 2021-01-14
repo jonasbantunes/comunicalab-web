@@ -1,0 +1,33 @@
+.background {
+  width: 100%;
+  height: 7.125rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(
+    -30deg,
+    #2400bd,
+    #1f00a6 20%,
+    #230a84 40%,
+    #291b56 20%
+  );
+}
+
+.info {
+  height: 4.5rem;
+  padding: 0.25rem 2rem;
+  word-wrap: break-word;
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: normal;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  font-weight: normal;
+}
