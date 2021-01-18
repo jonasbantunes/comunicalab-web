@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router';
-import AddOsImage from './pages/AddOsImage';
-import ListOsImages from './pages/ListOsImages';
+import AddOsImage from './pages/add/AddOsImage';
+import ListOsImages from './pages/list/ListOsImages';
 
 const OsImageRouter = () => {
   const match = useRouteMatch();

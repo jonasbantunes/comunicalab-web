@@ -4,11 +4,20 @@ import PropsType from 'prop-types';
 
 const OsImageListItem = (props) => (
   <div className={styles.wrapper}>
-    <p className={styles.title}>{props.name}</p>
-    <p className={styles.info}>
-      <strong>Data de criação: </strong>
-      <span>dd/mm/yyyy</span>
-    </p>
+    <div className={styles.infoWrapper}>
+      <p className={styles.title}>{props.name}</p>
+      <p className={styles.info}>
+        <strong>Data de criação: </strong>
+        <span>dd/mm/yyyy</span>
+      </p>
+    </div>
+    <div className={styles.options}>
+      <button className={styles.optionsBtn}>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+      </button>
+    </div>
   </div>
 );
 

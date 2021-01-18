@@ -1,10 +1,16 @@
 .wrapper {
   width: 17.5rem;
   margin-right: 1rem;
-  padding: 1.125rem 1.25rem 1.5rem 0.75rem;
+  padding: 1.125rem 0.75rem 1.5rem;
+  display: flex;
+
   border-radius: 14px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
     inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.infoWrapper {
+  flex: 1 1 0%;
 }
 
 .title {
@@ -15,4 +21,25 @@
 .info {
   margin-top: 1rem;
   font-size: 0.75rem;
+}
+
+.options {
+}
+
+.optionsBtn {
+  border: 0 none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  width: 0.25rem;
+  height: 0.25rem;
+  margin-top: 0.1875rem;
+  display: inline-block;
+  clip-path: circle();
+  background: black;
 }
