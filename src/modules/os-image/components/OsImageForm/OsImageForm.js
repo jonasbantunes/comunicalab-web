@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import * as customParseFormat from 'dayjs/plugin/customParseFormat';
 import styles from './OsImageForm.module.css';
 import PropsType from 'prop-types';
