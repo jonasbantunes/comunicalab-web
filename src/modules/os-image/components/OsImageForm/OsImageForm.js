@@ -18,7 +18,11 @@ const OsImageForm = (props) => {
         name: 'isValidDate',
         message: 'Data de criação é inválida',
         test: (value) => {
-          const parsedDate = dayjs(value, 'DD/MM/YYYY');
+          const parsedDate = dayjs(
+            value,
+            ['D/M/YYYY', 'DD/M/YYYY', 'D/MM/YYYY', 'DD/MM/YYYY'],
+            true
+          );
           return parsedDate.isValid();
         },
       }),
@@ -48,7 +52,7 @@ const OsImageForm = (props) => {
             className={styles.input}
             value={formik.values.name}
             onChange={formik.handleChange}
-            placeholder="Ex.: Laboratório 3"
+            placeholder="Ex.: Linux"
           />
         </div>
 
@@ -85,7 +89,7 @@ const OsImageForm = (props) => {
   );
 };
 
-OsImageForm.propsType = {
+OsImageForm.propTypes = {
   initialValues: PropsType.object,
   onSubmit: PropsType.func.isRequired,
   onCancel: PropsType.func.isRequired,

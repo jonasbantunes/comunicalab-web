@@ -1,33 +1,60 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Menu from '../../../../utils/components/Menu';
 import Title from '../../../../utils/components/Title';
 import Toolbar from '../../../../utils/components/Toolbar';
 import OsImageForm from '../../components/OsImageForm/OsImageForm';
 import styles from './EditOsImage.module.css';
 import dayjs from 'dayjs';
-import { Redirect } from 'react-router';
+import { Redirect, useParams } from 'react-router';
+import api from '../../../../services/api';
 
 const EditOsImage = () => {
   const [shouldRedirect, setShouldRedirect] = useState(false);
+  const [initialValues, setInitialValues] = useState({});
 
-  const osImage = {
-    name: 'Linux',
-    builtAt: new Date(),
-  };
+  const { id: imageId } = useParams();
 
-  const initialValues = {
-    name: osImage.name,
-    builtAt: dayjs(osImage.builtAt).format('DD/MM/YYYY'),
-  };
+  useEffect(() => {
+    api.get(`/osImage/${imageId}`).then((res) => {
+      const image = res.data;
+      setInitialValues({
+        name: image.name,
+        builtAt: dayjs(image.built_at).format('D/M/YYYY'),
+      });
+    });
+  }, [imageId]);
 
   const cancelHandler = () => setShouldRedirect(true);
-  const submitHandler = (values) => {
-    console.log('VALUES: ', values);
+  const submitHandler = async (values) => {
+    const parsedDate = dayjs(
+      values.builtAt,
+      ['D/M/YYYY', 'DD/M/YYYY', 'D/MM/YYYY', 'DD/MM/YYYY'],
+      true
+    );
+    const newOsImage = {
+      name: values.name,
+      built_at: parsedDate.toJSON(),
+    };
+    try {
+      await api.patch(`/osImage/${imageId}`, newOsImage);
+      setShouldRedirect(true);
+    } catch {
+      console.log('Erro no servidor. Por favor, tente mais tarde');
+    }
   };
 
   if (shouldRedirect) {
     return <Redirect to="/Imagens/Listar" />;
   }
+
+  const osImageForm = (
+    <OsImageForm
+      initialValues={initialValues}
+      onSubmit={submitHandler}
+      onCancel={cancelHandler}
+      submitLabel="Atualizar"
+    />
+  );
 
   return (
     <>
@@ -35,12 +62,7 @@ const EditOsImage = () => {
       <Menu />
       <Title title="Cadastrar Imagem" />
       <div className={styles.wrapper}>
-        <OsImageForm
-          initialValues={initialValues}
-          onSubmit={submitHandler}
-          onCancel={cancelHandler}
-          submitLabel="Atualizar"
-        />
+        {Object.keys(initialValues).length > 0 ? osImageForm : null}
       </div>
     </>
   );
