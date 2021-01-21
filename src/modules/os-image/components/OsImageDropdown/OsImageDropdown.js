@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Dropdown.module.css';
 import PropTypes from 'prop-types';
 
-const Dropdown = (props) => {
+const OsImageDropdown = (props) => {
   return (
     <div className={styles.dropdown}>
       <button className={styles.optionsBtn}>
@@ -25,10 +25,10 @@ const Dropdown = (props) => {
   );
 };
 
-Dropdown.propTypes = {
+OsImageDropdown.propTypes = {
   onView: PropTypes.func.isRequired,
   onEdit: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
 };
 
-export default Dropdown;
+export default OsImageDropdown;

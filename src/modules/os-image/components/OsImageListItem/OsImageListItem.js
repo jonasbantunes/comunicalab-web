@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styles from './OsImageListItem.module.css';
 import PropsType from 'prop-types';
-import Dropdown from '../Dropdown/Dropdown';
 import dayjs from 'dayjs';
 import { Redirect } from 'react-router';
 import ModalDelete from '../../../../utils/components/ModalDelete';
 import api from '../../../../services/api';
+import OsImageDropdown from '../OsImageDropdown/OsImageDropdown';
 
 const OsImageListItem = (props) => {
   const [redirectTo, setRedirectTo] = useState('');
@@ -34,7 +34,7 @@ const OsImageListItem = (props) => {
           <span>{dayjs(props.builtAt).format('D/M/YYYY')}</span>
         </p>
       </div>
-      <Dropdown
+      <OsImageDropdown
         onView={onViewHandler}
         onEdit={onEditHandler}
         onDelete={onDeleteHandler}

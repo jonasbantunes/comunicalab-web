@@ -60,7 +60,7 @@ const EditOsImage = () => {
     <>
       <Toolbar />
       <Menu />
-      <Title title="Cadastrar Imagem" />
+      <Title title="Editar Imagem" />
       <div className={styles.wrapper}>
         {Object.keys(initialValues).length > 0 ? osImageForm : null}
       </div>

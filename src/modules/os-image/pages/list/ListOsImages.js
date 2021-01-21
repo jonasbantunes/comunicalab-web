@@ -21,11 +21,20 @@ const ListOsImages = () => {
     );
   }, []);
 
+  let toolbarSubtitle;
+  if (osImages.length === 1) {
+    toolbarSubtitle = `(1 item)`;
+  } else if (osImages.length > 1) {
+    toolbarSubtitle = `(${osImages.length} itens)`;
+  } else {
+    toolbarSubtitle = undefined;
+  }
+
   return (
     <>
       <Toolbar />
       <Menu />
-      <Title title="Listar Imagens" subTitle="(3 itens)" />
+      <Title title="Listar Imagens" subTitle={toolbarSubtitle} />
       <div className={styles.wrapper}>
         <OsImageList images={osImages} />
       </div>
