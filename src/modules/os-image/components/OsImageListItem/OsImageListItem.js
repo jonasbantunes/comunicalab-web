@@ -15,23 +15,25 @@ const OsImageListItem = (props) => {
     return <Redirect to={redirectTo} />;
   }
 
-  const onViewHandler = () => setRedirectTo(`/Imagens/Visualizar/${props.id}`);
-  const onEditHandler = () => setRedirectTo(`/Imagens/Editar/${props.id}`);
+  const onViewHandler = () =>
+    setRedirectTo(`/Imagens/Visualizar/${props.osImage.id}`);
+  const onEditHandler = () =>
+    setRedirectTo(`/Imagens/Editar/${props.osImage.id}`);
   const onDeleteHandler = () => setShowModal(true);
 
   const onDeleteCancel = () => setShowModal(false);
   const onDeleteConfirm = () => {
-    api.delete(`/osImage/${props.id}`);
+    api.delete(`/osImage/${props.osImage.id}`);
     setShowModal(false);
   };
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.infoWrapper}>
-        <p className={styles.title}>{props.name}</p>
+        <p className={styles.title}>{props.osImage.name}</p>
         <p className={styles.info}>
           <strong>Data de criação: </strong>
-          <span>{dayjs(props.builtAt).format('D/M/YYYY')}</span>
+          <span>{dayjs(props.osImage.builtAt).format('D/M/YYYY')}</span>
         </p>
       </div>
       <OsImageDropdown
@@ -52,9 +54,7 @@ const OsImageListItem = (props) => {
 };
 
 OsImageListItem.propTypes = {
-  id: PropsType.number.isRequired,
-  name: PropsType.string.isRequired,
-  builtAt: PropsType.string.isRequired,
+  osImage: PropsType.object.isRequired,
 };
 
 export default OsImageListItem;

@@ -4,20 +4,15 @@ import styles from './OsImageList.module.css';
 import PropTypes from 'prop-types';
 
 const OsImageList = (props) => {
-  const imagesList = props.images.map((image) => (
-    <OsImageListItem
-      key={image.id}
-      id={image.id}
-      name={image.name}
-      builtAt={image.builtAt}
-    />
+  const imagesList = props.osImages.map((osImage) => (
+    <OsImageListItem key={osImage.id} osImage={osImage} />
   ));
 
   return <div className={styles.wrapper}>{imagesList}</div>;
 };
 
 OsImageList.propTypes = {
-  images: PropTypes.array.isRequired,
+  osImages: PropTypes.array.isRequired,
 };
 
 export default OsImageList;
