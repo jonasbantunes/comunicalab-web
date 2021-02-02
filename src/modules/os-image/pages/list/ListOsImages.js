@@ -9,17 +9,19 @@ import { observer } from 'mobx-react-lite';
 
 const ListOsImages = observer(() => {
   const { osImageStore } = useContext(RootStoreContext);
-  console.log(osImageStore);
+  const osImages = osImageStore.osImages;
 
   useEffect(() => {
-    osImageStore.fetchAll();
-  }, [osImageStore]);
+    if (osImages.length === 0) {
+      osImageStore.fetchAll();
+    }
+  }, [osImageStore, osImages.length]);
 
   let toolbarSubtitle;
-  if (osImageStore.osImages.length === 1) {
+  if (osImages.length === 1) {
     toolbarSubtitle = `(1 item)`;
-  } else if (osImageStore.osImages.length > 1) {
-    toolbarSubtitle = `(${osImageStore.osImages.length} itens)`;
+  } else if (osImages.length > 1) {
+    toolbarSubtitle = `(${osImages.length} itens)`;
   } else {
     toolbarSubtitle = undefined;
   }
@@ -30,7 +32,7 @@ const ListOsImages = observer(() => {
       <Menu />
       <Title title="Listar Imagens" subTitle={toolbarSubtitle} />
       <div className={styles.wrapper}>
-        <OsImageList osImages={osImageStore.osImages} />
+        <OsImageList osImages={osImages} />
       </div>
     </>
   );

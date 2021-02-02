@@ -4,7 +4,6 @@ import PropsType from 'prop-types';
 import dayjs from 'dayjs';
 import { Redirect } from 'react-router';
 import ModalDelete from '../../../../utils/components/ModalDelete';
-import api from '../../../../services/api';
 import OsImageDropdown from '../OsImageDropdown/OsImageDropdown';
 
 const OsImageListItem = (props) => {
@@ -12,7 +11,7 @@ const OsImageListItem = (props) => {
   const [showModal, setShowModal] = useState(false);
 
   if (redirectTo !== '') {
-    return <Redirect to={redirectTo} />;
+    return <Redirect to={redirectTo} push />;
   }
 
   const onViewHandler = () =>
@@ -23,7 +22,7 @@ const OsImageListItem = (props) => {
 
   const onDeleteCancel = () => setShowModal(false);
   const onDeleteConfirm = () => {
-    api.delete(`/osImage/${props.osImage.id}`);
+    props.osImage.remove();
     setShowModal(false);
   };
 
