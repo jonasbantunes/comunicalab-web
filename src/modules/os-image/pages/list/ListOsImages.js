@@ -12,10 +12,8 @@ const ListOsImages = observer(() => {
   const osImages = osImageStore.osImages;
 
   useEffect(() => {
-    if (osImages.length === 0) {
-      osImageStore.fetchAll();
-    }
-  }, [osImageStore, osImages.length]);
+    osImageStore.fetchAll();
+  }, [osImageStore]);
 
   let toolbarSubtitle;
   if (osImages.length === 1) {

@@ -4,52 +4,78 @@ import PropsType from 'prop-types';
 import dayjs from 'dayjs';
 import { Redirect } from 'react-router';
 import ModalDelete from '../../../../utils/components/ModalDelete';
-import OsImageDropdown from '../OsImageDropdown/OsImageDropdown';
+import Dropdown from '../../../../shared/components/Dropdown/Dropdown';
 
 const OsImageListItem = (props) => {
   const [redirectTo, setRedirectTo] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   if (redirectTo !== '') {
     return <Redirect to={redirectTo} push />;
-  }
+  } else {
+    const handleDropdownClick = (event) => setAnchorEl(event.currentTarget);
+    const handleDropdownClose = () => {
+      setAnchorEl(null);
+    };
 
-  const onViewHandler = () =>
-    setRedirectTo(`/Imagens/Visualizar/${props.osImage.id}`);
-  const onEditHandler = () =>
-    setRedirectTo(`/Imagens/Editar/${props.osImage.id}`);
-  const onDeleteHandler = () => setShowModal(true);
+    const handleEdit = () => {
+      handleDropdownClose();
+      setRedirectTo(`/Imagens/Editar/${props.osImage.id}`);
+    };
 
-  const onDeleteCancel = () => setShowModal(false);
-  const onDeleteConfirm = () => {
-    props.osImage.remove();
-    setShowModal(false);
-  };
+    const handleDelete = () => {
+      handleDropdownClose();
+      setShowModal(true);
+    };
+    const handleDeletionCancel = () => setShowModal(false);
+    const handleDeletionConfirm = () => {
+      props.osImage.remove();
+      setShowModal(false);
+    };
 
-  return (
-    <div className={styles.wrapper}>
-      <div className={styles.infoWrapper}>
-        <p className={styles.title}>{props.osImage.name}</p>
-        <p className={styles.info}>
-          <strong>Data de criação: </strong>
-          <span>{dayjs(props.osImage.builtAt).format('D/M/YYYY')}</span>
-        </p>
+    return (
+      <div className={styles.wrapper}>
+        <div className={styles.infoWrapper}>
+          <p className={styles.title}>{props.osImage.name}</p>
+          <p className={styles.info}>
+            <strong>Data de criação: </strong>
+            <span>{dayjs(props.osImage.builtAt).format('D/M/YYYY')}</span>
+          </p>
+        </div>
+
+        <button className={styles.optionsBtn} onClick={handleDropdownClick}>
+          <span className={styles.dot}></span>
+          <span className={styles.dot}></span>
+          <span className={styles.dot}></span>
+        </button>
+        <Dropdown
+          anchorEl={anchorEl}
+          open={anchorEl != null}
+          onClose={handleDropdownClose}
+          align="left"
+        >
+          <div className={styles.menu}>
+            <button className={styles.option} onClick={handleEdit}>
+              Editar
+            </button>
+            <button className={styles.option} onClick={handleDelete}>
+              Excluir
+            </button>
+          </div>
+        </Dropdown>
+
+        <ModalDelete
+          title="Excluir Imagem?"
+          show={showModal}
+          onClose={handleDeletionCancel}
+          onConfirm={handleDeletionConfirm}
+        >
+          Tem certeza que deseja excluir permanentemente esta Imagem?
+        </ModalDelete>
       </div>
-      <OsImageDropdown
-        onView={onViewHandler}
-        onEdit={onEditHandler}
-        onDelete={onDeleteHandler}
-      />
-      <ModalDelete
-        title="Excluir Imagem?"
-        show={showModal}
-        onClose={onDeleteCancel}
-        onConfirm={onDeleteConfirm}
-      >
-        Tem certeza que deseja excluir permanentemente esta Imagem?
-      </ModalDelete>
-    </div>
-  );
+    );
+  }
 };
 
 OsImageListItem.propTypes = {
