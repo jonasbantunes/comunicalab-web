@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import PropTypes from 'prop-types';
-
-import ModalDelete from '../../../../utils/components/ModalDelete';
 import selectionStatus from '../actions/selectionStatus';
-
 import '../styles/Laboratorio.css';
+import ModalDelete from '../../../../shared/components/ModalDelete/ModalDelete';
 
 function Laboratorio({ lab }) {
   const statusCor = selectionStatus(lab.status);

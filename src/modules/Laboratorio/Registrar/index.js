@@ -1,8 +1,7 @@
 import React from 'react';
-
-import Menu from '../../../utils/components/Menu';
-import Title from '../../../utils/components/Title';
-import Toolbar from '../../../utils/components/Toolbar';
+import Menu from '../../../shared/components/Menu/Menu';
+import Title from '../../../shared/components/Title/Title';
+import Toolbar from '../../../shared/components/Toolbar/Toolbar';
 import Formulario from './components/Formulario';
 
 function Registrar() {

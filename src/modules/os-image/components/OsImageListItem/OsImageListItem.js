@@ -3,8 +3,8 @@ import styles from './OsImageListItem.module.css';
 import PropsType from 'prop-types';
 import dayjs from 'dayjs';
 import { Redirect } from 'react-router';
-import ModalDelete from '../../../../utils/components/ModalDelete';
 import Dropdown from '../../../../shared/components/Dropdown/Dropdown';
+import ModalDelete from '../../../../shared/components/ModalDelete/ModalDelete';
 
 const OsImageListItem = (props) => {
   const [redirectTo, setRedirectTo] = useState('');

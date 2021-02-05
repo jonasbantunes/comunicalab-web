@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import avatar from '../../assets/User.png';
-import styles from '../styles/Toolbar.module.css';
-import logoImg from '../../assets/ComunicaLab.png';
+import avatar from '../../../assets/User.png';
+import styles from './Toolbar.module.css';
+import logoImg from '../../../assets/ComunicaLab.png';
 
 function Toolbar() {
   return (

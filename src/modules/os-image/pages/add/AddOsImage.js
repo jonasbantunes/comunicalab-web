@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
-import Menu from '../../../../utils/components/Menu';
-import Title from '../../../../utils/components/Title';
-import Toolbar from '../../../../utils/components/Toolbar';
 import styles from './AddOsImage.module.css';
 import OsImageForm from '../../components/OsImageForm/OsImageForm';
 import { Redirect } from 'react-router-dom';
 import dayjs from 'dayjs';
 import { RootStoreContext } from '../../../../data/store/root-store';
+import Toolbar from '../../../../shared/components/Toolbar/Toolbar';
+import Menu from '../../../../shared/components/Menu/Menu';
+import Title from '../../../../shared/components/Title/Title';
 
 const ListOsImages = () => {
   const [shouldRedirect, setShouldRedirect] = useState(false);

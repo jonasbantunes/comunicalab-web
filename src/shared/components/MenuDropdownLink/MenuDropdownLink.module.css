@@ -1,0 +1,15 @@
+.button {
+  white-space: nowrap;
+  font-size: 1.125rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  background: transparent;
+  border: 0 none;
+}
+
+.button:hover {
+  border: 0px;
+  text-decoration: underline;
+  cursor: pointer;
+}

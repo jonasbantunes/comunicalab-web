@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react';
 import { RootStoreContext } from '../../../../data/store/root-store';
-import Menu from '../../../../utils/components/Menu';
-import Title from '../../../../utils/components/Title';
-import Toolbar from '../../../../utils/components/Toolbar';
 import OsImageList from '../../components/OsImageList/OsImageList';
 import styles from './ListOsImages.module.css';
 import { observer } from 'mobx-react-lite';
+import Toolbar from '../../../../shared/components/Toolbar/Toolbar';
+import Menu from '../../../../shared/components/Menu/Menu';
+import Title from '../../../../shared/components/Title/Title';
 
 const ListOsImages = observer(() => {
   const { osImageStore } = useContext(RootStoreContext);

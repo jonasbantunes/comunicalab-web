@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import PropTypes from 'prop-types';
-
-import ModalDelete from '../../../../utils/components/ModalDelete';
-
 import '../styles/Equip.css';
 import selectionStatus from '../actions/selectionStatus';
+import ModalDelete from '../../../../shared/components/ModalDelete/ModalDelete';
 
 function Equip({ equip }) {
   const statusUsoCor = selectionStatus(equip.statusUso);

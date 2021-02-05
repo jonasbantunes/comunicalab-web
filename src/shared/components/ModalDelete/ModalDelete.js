@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/ModalDelete.css';
+import './ModalDelete.css';
 import PropTypes from 'prop-types';
 
 export default class ModalDelete extends React.PureComponent {

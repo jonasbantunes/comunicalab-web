@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
-import Menu from '../../../../utils/components/Menu';
-import Title from '../../../../utils/components/Title';
-import Toolbar from '../../../../utils/components/Toolbar';
 import OsImageForm from '../../components/OsImageForm/OsImageForm';
 import styles from './EditOsImage.module.css';
 import dayjs from 'dayjs';
 import { Redirect, useParams } from 'react-router';
 import { RootStoreContext } from '../../../../data/store/root-store';
 import { observer } from 'mobx-react-lite';
+import Menu from '../../../../shared/components/Menu/Menu';
+import Title from '../../../../shared/components/Title/Title';
+import Toolbar from '../../../../shared/components/Toolbar/Toolbar';
 
 const EditOsImage = observer(() => {
   const { id: imageId } = useParams();

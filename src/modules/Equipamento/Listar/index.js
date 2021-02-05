@@ -1,10 +1,8 @@
 import React from 'react';
-
-import Menu from '../../../utils/components/Menu';
-import Title from '../../../utils/components/Title';
-import Toolbar from '../../../utils/components/Toolbar';
+import Menu from '../../../shared/components/Menu/Menu';
+import Title from '../../../shared/components/Title/Title';
+import Toolbar from '../../../shared/components/Toolbar/Toolbar';
 import Equip from './components/Equip';
-
 import './styles/index.css';
 
 export default function ListarEquipamento() {
