@@ -5,6 +5,7 @@ import dayjs from 'dayjs';
 import { Redirect } from 'react-router';
 import ModalDelete from '../../../../utils/components/ModalDelete';
 import Dropdown from '../../../../shared/components/Dropdown/Dropdown';
+import osImageIcon from '../../../../assets/os-image-icon.png';
 
 const OsImageListItem = (props) => {
   const [redirectTo, setRedirectTo] = useState('');
@@ -36,11 +37,33 @@ const OsImageListItem = (props) => {
 
     return (
       <div className={styles.wrapper}>
+        <div className={styles.iconWrapper}>
+          <img
+            className={styles.icon}
+            src={osImageIcon}
+            alt="Ícone de Imagem de SO"
+          />
+        </div>
+        <div className={styles.rulerWrapper}>
+          <div className={styles.ruler}></div>
+        </div>
         <div className={styles.infoWrapper}>
           <p className={styles.title}>{props.osImage.name}</p>
           <p className={styles.info}>
             <strong>Data de criação: </strong>
             <span>{dayjs(props.osImage.builtAt).format('D/M/YYYY')}</span>
+          </p>
+          <p className={styles.info}>
+            <strong>Nº de Instalações: </strong>
+            <span>40</span>
+          </p>
+          <p className={styles.info}>
+            <strong>Nº de Softwares Instalados: </strong>
+            <span>11</span>
+          </p>
+          <p className={styles.info}>
+            <strong>Última atualização: </strong>
+            <span>15/01/2021</span>
           </p>
         </div>
 
@@ -53,14 +76,25 @@ const OsImageListItem = (props) => {
           anchorEl={anchorEl}
           open={anchorEl != null}
           onClose={handleDropdownClose}
-          align="left"
         >
           <div className={styles.menu}>
+            <button className={styles.option} onClick={handleDropdownClose}>
+              Ver Softwares
+            </button>
+            <button className={styles.option} onClick={handleDropdownClose}>
+              Adicionar Softwares
+            </button>
+            <button className={styles.option} onClick={handleDropdownClose}>
+              Adicionar à Equipamentos
+            </button>
+            <button className={styles.option} onClick={handleDropdownClose}>
+              Adicionar à Laboratórios
+            </button>
             <button className={styles.option} onClick={handleEdit}>
-              Editar
+              Editar Imagem
             </button>
             <button className={styles.option} onClick={handleDelete}>
-              Excluir
+              Excluir Imagem
             </button>
           </div>
         </Dropdown>
