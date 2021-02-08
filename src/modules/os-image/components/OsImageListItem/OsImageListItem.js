@@ -22,7 +22,12 @@ const OsImageListItem = (props) => {
 
     const handleEdit = () => {
       handleDropdownClose();
-      setRedirectTo(`/Imagens/Editar/${props.osImage.id}`);
+      setRedirectTo(`/Imagens/${props.osImage.id}/Editar`);
+    };
+
+    const handleAddToLab = () => {
+      handleDropdownClose();
+      setRedirectTo(`/Imagens/${props.osImage.id}/RegistrarEmLaboratorio`);
     };
 
     const handleDelete = () => {
@@ -87,7 +92,7 @@ const OsImageListItem = (props) => {
             <button className={styles.option} onClick={handleDropdownClose}>
               Adicionar à Equipamentos
             </button>
-            <button className={styles.option} onClick={handleDropdownClose}>
+            <button className={styles.option} onClick={handleAddToLab}>
               Adicionar à Laboratórios
             </button>
             <button className={styles.option} onClick={handleEdit}>
