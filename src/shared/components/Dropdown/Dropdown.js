@@ -1,17 +1,18 @@
 import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 
 const Dropdown = (props) => {
+  const { align = 'right', anchorEl, children, onClose, open } = props;
+
   const wrapperRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        props.open &&
+        open &&
         wrapperRef.current &&
         !wrapperRef.current.contains(event.target)
       ) {
-        props.onClose();
+        onClose();
       }
     };
 
@@ -19,12 +20,12 @@ const Dropdown = (props) => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [props]);
+  }, [onClose, open]);
 
-  if (!props.open || props.anchorEl == null) {
+  if (!open || anchorEl == null) {
     return null;
   } else {
-    const dimensions = props.anchorEl.getBoundingClientRect();
+    const dimensions = anchorEl.getBoundingClientRect();
 
     return (
       <div
@@ -32,29 +33,18 @@ const Dropdown = (props) => {
         style={{
           position: 'absolute',
           top: dimensions.y + 10,
-          left: props.align === 'right' ? dimensions.x : undefined,
+          left: align === 'right' ? dimensions.x : undefined,
           right:
-            props.align === 'left'
+            align === 'left'
               ? `calc(100% - ${dimensions.x + dimensions.width}px)`
               : undefined,
           zIndex: 1,
         }}
       >
-        {props.children}
+        {children}
       </div>
     );
   }
-};
-
-Dropdown.propTypes = {
-  align: PropTypes.string,
-  anchorEl: PropTypes.object,
-  onClose: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
-};
-
-Dropdown.defaultProps = {
-  align: 'right',
 };
 
 export default Dropdown;

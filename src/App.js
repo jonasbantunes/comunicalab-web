@@ -2,12 +2,12 @@ import React from 'react';
 
 import Routes from './routes';
 import './App.css';
-import { RootStore, RootStoreContext } from './data/store/root-store';
+import { RootStoreProvider } from './data/store/root-store';
 
 const App = () => (
-  <RootStoreContext.Provider value={new RootStore()}>
+  <RootStoreProvider>
     <Routes />
-  </RootStoreContext.Provider>
+  </RootStoreProvider>
 );
 
 export default App;

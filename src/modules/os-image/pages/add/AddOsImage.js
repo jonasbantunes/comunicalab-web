@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import Menu from '../../../../utils/components/Menu';
 import Title from '../../../../utils/components/Title';
 import Toolbar from '../../../../utils/components/Toolbar';
@@ -6,11 +6,12 @@ import styles from './AddOsImage.module.css';
 import OsImageForm from '../../components/OsImageForm/OsImageForm';
 import { Redirect } from 'react-router-dom';
 import dayjs from 'dayjs';
-import { RootStoreContext } from '../../../../data/store/root-store';
+import { useRootStore } from '../../../../data/store/root-store';
 
 const ListOsImages = () => {
+  const { osImageStore } = useRootStore();
+
   const [shouldRedirect, setShouldRedirect] = useState(false);
-  const { osImageStore } = useContext(RootStoreContext);
 
   if (shouldRedirect) {
     return <Redirect to="/Imagens/Listar" />;
@@ -24,7 +25,7 @@ const ListOsImages = () => {
       );
       const newOsImage = {
         name: values.name,
-        builtAt: parsedDate.toJSON(),
+        built_at: parsedDate.toJSON(),
       };
       await osImageStore.createOne(newOsImage);
       setShouldRedirect(true);

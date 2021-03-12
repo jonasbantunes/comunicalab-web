@@ -11,37 +11,23 @@ export class OsImageStore {
     this.rootStore = rootStore;
   }
 
-  *createOne(osImage) {
-    const osImageDto = {
-      name: osImage.name,
-      built_at: osImage.builtAt,
-    };
-    const res = yield api.post('osImage', osImageDto);
+  *createOne(osImageApiJson) {
+    const res = yield api.post('osImage', osImageApiJson);
 
-    const newOsImage = new OsImage(this);
-    newOsImage.id = res.data.id;
-    newOsImage.name = res.data.name;
-    newOsImage.builtAt = res.data.built_at;
+    const newOsImage = OsImage.FromApiJson(this, res.data);
     this.osImages.push(newOsImage);
   }
 
   *fetchAll() {
     const res = yield api.get('osImage');
-    this.osImages = res.data.map((osImage) => {
-      const newOsImage = new OsImage(this);
-      newOsImage.id = String(osImage.id);
-      newOsImage.name = osImage.name;
-      newOsImage.builtAt = osImage.built_at;
-      return newOsImage;
-    });
+    this.osImages = res.data.map((osImageApiJson) =>
+      OsImage.FromApiJson(this, osImageApiJson)
+    );
   }
 
   *fetchOne(id) {
     const res = yield api.get(`osImage/${id}`);
-    const osImage = new OsImage(this);
-    osImage.id = String(res.data.id);
-    osImage.name = res.data.name;
-    osImage.builtAt = res.data.builtAt;
+    const osImage = OsImage.FromApiJson(this, res.data);
 
     const foundIndex = this.osImages.findIndex(
       (image) => image.id === osImage.id
@@ -58,6 +44,6 @@ export class OsImageStore {
   }
 
   selectOsImage(id) {
-    return this.osImages.find((image) => image.id === id) ?? null;
+    return this.osImages.find((image) => image.id === id);
   }
 }

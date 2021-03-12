@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import styles from './OsImageListItem.module.css';
-import PropsType from 'prop-types';
 import dayjs from 'dayjs';
 import { Redirect } from 'react-router';
 import ModalDelete from '../../../../utils/components/ModalDelete';
 import Dropdown from '../../../../shared/components/Dropdown/Dropdown';
 import osImageIcon from '../../../../assets/os-image-icon.png';
+import clsx from 'clsx';
 
 const OsImageListItem = (props) => {
+  const { className, osImage, ...otherProps } = props;
+
   const [redirectTo, setRedirectTo] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -22,12 +24,12 @@ const OsImageListItem = (props) => {
 
     const handleEdit = () => {
       handleDropdownClose();
-      setRedirectTo(`/Imagens/${props.osImage.id}/Editar`);
+      setRedirectTo(`/Imagens/${osImage.id}/Editar`);
     };
 
     const handleAddToLab = () => {
       handleDropdownClose();
-      setRedirectTo(`/Imagens/${props.osImage.id}/RegistrarEmLaboratorio`);
+      setRedirectTo(`/Imagens/${osImage.id}/RegistrarEmLaboratorio`);
     };
 
     const handleDelete = () => {
@@ -36,12 +38,12 @@ const OsImageListItem = (props) => {
     };
     const handleDeletionCancel = () => setShowModal(false);
     const handleDeletionConfirm = () => {
-      props.osImage.remove();
+      osImage.remove();
       setShowModal(false);
     };
 
     return (
-      <div className={styles.wrapper}>
+      <div className={clsx(styles.wrapper, className)} {...otherProps}>
         <div className={styles.iconWrapper}>
           <img
             className={styles.icon}
@@ -53,10 +55,10 @@ const OsImageListItem = (props) => {
           <div className={styles.ruler}></div>
         </div>
         <div className={styles.infoWrapper}>
-          <p className={styles.title}>{props.osImage.name}</p>
+          <p className={styles.title}>{osImage.name}</p>
           <p className={styles.info}>
             <strong>Data de criação: </strong>
-            <span>{dayjs(props.osImage.builtAt).format('D/M/YYYY')}</span>
+            <span>{dayjs(osImage.builtAt).format('D/M/YYYY')}</span>
           </p>
           <p className={styles.info}>
             <strong>Nº de Instalações: </strong>
@@ -115,10 +117,6 @@ const OsImageListItem = (props) => {
       </div>
     );
   }
-};
-
-OsImageListItem.propTypes = {
-  osImage: PropsType.object.isRequired,
 };
 
 export default OsImageListItem;

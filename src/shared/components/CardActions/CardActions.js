@@ -3,11 +3,11 @@ import React from 'react';
 import styles from './CardActions.module.css';
 
 const CardActions = (props) => {
-  const { className, ...otherProps } = props;
+  const { children, className, ...otherProps } = props;
 
   return (
     <div className={clsx(styles.cardActions, className)} {...otherProps}>
-      {props.children}
+      {children}
     </div>
   );
 };

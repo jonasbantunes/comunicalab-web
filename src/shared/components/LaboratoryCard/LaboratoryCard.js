@@ -6,7 +6,7 @@ import CardStatus from '../CardStatus/CardStatus';
 import styles from './LaboratoryCard.module.css';
 
 const LaboratoryCard = (props) => {
-  const { className, laboratory, ...otherProps } = props;
+  const { className, laboratory, children, ...otherProps } = props;
 
   return (
     <Card className={clsx(styles.labCard, className)} {...otherProps}>
@@ -24,7 +24,7 @@ const LaboratoryCard = (props) => {
           <span>{laboratory.capacity}</span>
         </p>
       </div>
-      {props.children}
+      {children}
     </Card>
   );
 };

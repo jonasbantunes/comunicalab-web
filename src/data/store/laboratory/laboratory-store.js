@@ -20,9 +20,9 @@ export class LaboratoryStore {
 
   *fetchAll() {
     const res = yield api.get('laboratory');
-    this.laboratories = res.data.map((laboratoryApiJson) => {
-      return Laboratory.FromApiJson(this, laboratoryApiJson);
-    });
+    this.laboratories = res.data.map((laboratoryApiJson) =>
+      Laboratory.FromApiJson(this, laboratoryApiJson)
+    );
   }
 
   removeOne(laboratory) {
@@ -30,6 +30,6 @@ export class LaboratoryStore {
   }
 
   selectLaboratory(id) {
-    return this.laboratory.find((laboratory) => laboratory.id === id) ?? null;
+    return this.laboratory.find((laboratory) => laboratory.id === id);
   }
 }

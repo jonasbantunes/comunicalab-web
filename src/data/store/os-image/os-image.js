@@ -12,11 +12,20 @@ export class OsImage {
     this.store = store;
   }
 
-  get asJson() {
+  static FromApiJson(store, osImageApiJson) {
+    const newOsImage = new OsImage(store);
+    newOsImage.id = osImageApiJson.id;
+    newOsImage.name = osImageApiJson.name;
+    newOsImage.builtAt = osImageApiJson.built_at;
+
+    return newOsImage;
+  }
+
+  get asApiJson() {
     return {
       id: this.id,
       name: this.name,
-      builtAt: this.builtAt,
+      built_at: this.builtAt,
     };
   }
 
@@ -26,10 +35,6 @@ export class OsImage {
   }
 
   *update() {
-    const osImageDto = {
-      name: this.name,
-      built_at: this.builtAt,
-    };
-    yield api.patch(`osImage/${this.id}`, osImageDto);
+    yield api.patch(`osImage/${this.id}`, this.asApiJson);
   }
 }

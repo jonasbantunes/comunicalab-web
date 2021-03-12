@@ -1,25 +1,26 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Menu from '../../../../utils/components/Menu';
 import Title from '../../../../utils/components/Title';
 import Toolbar from '../../../../utils/components/Toolbar';
 import OsImageForm from '../../components/OsImageForm/OsImageForm';
-import styles from './EditOsImage.module.css';
 import dayjs from 'dayjs';
 import { Redirect, useParams } from 'react-router';
-import { RootStoreContext } from '../../../../data/store/root-store';
 import { observer } from 'mobx-react-lite';
+import styles from './EditOsImage.module.css';
+import { useRootStore } from '../../../../data/store/root-store';
 
 const EditOsImage = observer(() => {
-  const { id: imageId } = useParams();
+  const params = useParams();
+  const { osImageStore } = useRootStore();
+
   const [shouldRedirect, setShouldRedirect] = useState(false);
-  const { osImageStore } = useContext(RootStoreContext);
-  const osImage = osImageStore.selectOsImage(imageId);
+  const osImage = osImageStore.selectOsImage(parseInt(params.id));
 
   useEffect(() => {
     if (osImage == null) {
-      osImageStore.fetchOne(imageId);
+      osImageStore.fetchOne(params.id);
     }
-  }, [imageId, osImage, osImageStore]);
+  }, [osImage, osImageStore, params.id]);
 
   if (shouldRedirect) {
     return <Redirect to="/Imagens/Listar" />;

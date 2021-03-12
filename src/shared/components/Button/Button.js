@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Button.module.css';
 
 const Button = (props) => {
-  const { className, children, ...otherProps } = props;
+  const { children, className, ...otherProps } = props;
 
   return (
     <button className={clsx(styles.button, className)} {...otherProps}>

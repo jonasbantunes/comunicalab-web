@@ -1,16 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { observer } from 'mobx-react-lite';
 import styles from './AddOsImageToLab.module.css';
 import Toolbar from '../../../../utils/components/Toolbar';
 import Menu from '../../../../utils/components/Menu';
 import Title from '../../../../utils/components/Title';
-import { RootStoreContext } from '../../../../data/store/root-store';
-import CardActions from '../../components/CardActions/CardActions';
-import LaboratoryCard from '../../components/LaboratoryCard/LaboratoryCard';
 import Button from '../../../../shared/components/Button/Button';
+import CardActions from '../../../../shared/components/CardActions/CardActions';
+import { useRootStore } from '../../../../data/store/root-store';
+import LaboratoryCard from '../../../../shared/components/LaboratoryCard/LaboratoryCard';
 
 const AddOsImageToLab = observer(() => {
-  const { laboratoryStore } = useContext(RootStoreContext);
+  const { laboratoryStore } = useRootStore();
+
   const [selectedLabs, setSelectedLabs] = useState([]);
   const labs = laboratoryStore.laboratories;
 
